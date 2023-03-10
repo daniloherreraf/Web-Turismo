@@ -1,0 +1,72 @@
+:root{
+    --primaryColor: #3ab3a7;
+    --primaryHover: #0c988a;
+    --secHoverColor: #253b53;
+    --greyColor: #f7f7f7;
+  }
+
+
+  .review{
+    background: var(--greyColor);
+
+    .reviewContainer{
+      margin-top: 4rem;
+      gap: 4rem;
+
+      .singleReview{
+        position: relative;
+        background: white;
+        box-shadow: 0 3px 5px rgb(218,218,218);
+        padding: 1.5rem;
+        text-align: center;
+        border-radius: 10px;
+        transition: .4s ease;
+
+        &:hover{
+          transform: translateY(-10px);
+        }
+
+        .imgDiv{
+          position: absolute;
+          height: 90px;
+          width: 90px;
+          right: 50%;
+          left: 50%;
+          top: -23%;
+          border-radius: 50%;
+          overflow: hidden;
+          transform: translateX(-50%);
+          border: 10px solid white;
+        }
+
+        p{
+          padding: 1rem;
+          line-height: 1.3rem;
+        }
+
+        .name{
+          color: var(--primaryColor);
+          font-weight: 600;
+        }
+      }
+
+
+    }
+  }
+
+  // media queries
+  @media screen and (min-width:574px) {
+    .review{
+      .reviewContainer{
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
+
+  @media screen and (min-width:840px) {
+    .review{
+      .reviewContainer{
+        grid-template-columns: repeat(3,1fr);
+      }
+    }
+  }

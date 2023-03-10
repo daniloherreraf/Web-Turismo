@@ -1,0 +1,106 @@
+:root{
+    --primaryColor: #3ab3a7;
+    --primaryHover: #0c988a;
+    --secHoverColor: #253b53;
+    --greyColor: #f7f7f7;
+  }
+
+.home{
+  height: 90vh;
+  width: 100%;
+  padding: 5rem 1.5rem;
+  background: linear-gradient(rgba(0,0,1,0.42), rgba(0,0,1,0.549)), url("https://cloudfront-us-east-1.images.arcpublishing.com/semana/7QHBEEPBRZF7FHPPJQVKW2AHTY.jpg");
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  row-gap: 3rem;
+
+  .spanText{
+    color: white;
+    font-weight: 500;
+  }
+
+  .homeTitle{
+    color: white;
+    padding: 2rem 0;
+    font-size: 40px;
+
+    strong{
+      font-weight: 800;
+    }
+  }
+
+  .btn{
+    border: 2px solid white;
+    color: white;
+    font-size: 13px;
+    transition: .3s;
+    width: max-content;
+    &:hover{
+      background: white;
+      color: var(--primaryColor);
+      border: 2px solid white;
+    }
+  }
+}
+
+// media queries
+@media screen and (min-width:690px){
+  .home{
+
+    .homeText{
+      transform: translateX(5rem);
+    }
+    .spanText{
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .homeTitle{
+      color: white;
+      padding: 2rem 0;
+      font-size: 45px;
+    }
+
+    .btn{
+      border: 2px solid white;
+      color: white;
+      font-size: 15px;
+      transition: .3s;
+
+    }
+  }
+}
+
+@media screen and (min-width:840px){
+  .home{
+    .homeText{
+      transform: translateX(10rem);
+    }
+  }
+}
+
+@media screen and (min-width:1240px){
+  .home{
+    .homeText{
+      transform: translateX(20rem);
+
+      .spanText{
+        font-size: 25px;
+      }
+
+      .homeTitle{
+        font-size: 70px;
+      }
+
+      .btn{
+        font-size: 22px;  
+      }
+    }
+  }
+}
+
+
